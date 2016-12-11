@@ -1,13 +1,13 @@
-#!/usr/bin/expect
+#!/usr/bin/expect -f
 
-host=139.196.55.120
+set host 139.196.55.120
 
-user=$1
-psaawrd=$2
+set user [lindex $argv 0]
+set passwd [lindex $argv 1]
 
 spawn /usr/bin/ssh $user@$host
 expect "*assword:"
-send $2"\r"
+send "$passwd\r"
 interact
 
 
