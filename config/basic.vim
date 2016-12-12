@@ -1,4 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Canonxu_tip: 
+"       20161212 fork from the github(https://github.com/amix/vimrc)
+"
 " Maintainer: 
 "       Amir Salihefendic
 "       http://amix.dk - amix@amix.dk
@@ -49,6 +53,9 @@ set history=500
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+
+" Enable line number
+set number
 
 " Set to auto read when a file is changed from the outside
 set autoread
