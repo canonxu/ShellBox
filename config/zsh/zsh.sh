@@ -1,5 +1,10 @@
 #/bin/bash
 
+# Function: install or uninstall oh-my-zsh
+# Install: bash zsh.sh install
+# Uninstall: bash zsh.sh uninstall
+# Note: default theme is 'robbyrussell', and i can change it to 'steeef' by change the .zshrc file
+
 cd ~
 
 url=https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
