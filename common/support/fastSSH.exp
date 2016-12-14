@@ -22,11 +22,10 @@ expect {
     "*?es/?o:" {
         send "yes\r"
         exp_continue
-    } 
+    }
     "*?assword:" {
         send "$passwd\r"
     }
 }
 
 interact
-

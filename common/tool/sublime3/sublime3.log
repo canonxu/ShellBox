@@ -12,5 +12,6 @@ plugin:
     6. SublimeTmpl - set template for program files, such as 'ctrl + alt + p' to create a new .php file
                    - need config in detail, especailly the python, shell, java file
     7. Pretty Json - format the json file, default shortcut is 'ctrl + alt + j'
+    8. git - git for sublime
 Theme:
     Monokai Extended
