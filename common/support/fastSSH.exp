@@ -1,0 +1,32 @@
+#!/usr/bin/expect -f
+
+# Function: directly SSH by username and password, no interaction
+# Dependency: apt-get install expect
+# Example: ./loginAliyun username passwaed
+
+# here is my aliyun host
+set host 139.196.55.120
+
+if {[llength $argv] != 2} {
+    send_user "Two Params \"username\" and \"password\" are required... "
+    exit 1
+}
+
+set user [lindex $argv 0]
+set passwd [lindex $argv 1]
+
+spawn /usr/bin/ssh $user@$host
+set timeout 10
+
+expect {
+    "*?es/?o:" {
+        send "yes\r"
+        exp_continue
+    } 
+    "*?assword:" {
+        send "$passwd\r"
+    }
+}
+
+interact
+
