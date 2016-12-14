@@ -2,7 +2,7 @@
 
 # Function: directly SSH by username and password, no interaction
 # Dependency: apt-get install expect
-# Example: ./loginAliyun username passwaed
+# Example: ./fastSSH.exp username passwaed
 
 # here is my aliyun host
 set host 139.196.55.120
