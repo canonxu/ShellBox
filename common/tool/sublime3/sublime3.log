@@ -1,0 +1,16 @@
+[update]20161214 in PC
+Install sublime3 in windows
+setting:
+    font-size:10
+    fonr-face:Ubuntu-Mono
+plugin:
+    1. Install package - install the packages with 'ctrl+shift+p'
+    2. ConvertToUTF8 - convert the file to utf8 encoding
+    3. SublimeLinter - spelling check
+    4. SidebarEnhancement - enhance the function of sidebar,such as new a  file 
+    5. TrailingSpace - show remove redundant spaces, and remove then in a flash by shortcut 'ctrl+shift+t' 
+    6. SublimeTmpl - set template for program files, such as 'ctrl + alt + p' to create a new .php file
+                   - need config in detail, especailly the python, shell, java file
+    7. Pretty Json - format the json file, default shortcut is 'ctrl + alt + j'
+Theme:
+    Monokai Extended
