@@ -2,7 +2,8 @@
 "
 " Canonxu_tip: 
 "       20161212 fork from the github(https://github.com/amix/vimrc)
-"
+"	20161115: set number
+"	
 " Maintainer: 
 "       Amir Salihefendic
 "       http://amix.dk - amix@amix.dk
