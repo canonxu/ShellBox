@@ -1,0 +1,54 @@
+"
+" Configs for plugins mansgement
+"
+if &compatible
+  set nocompatible
+end
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Run 'vim +BundleInstall +pall' to install 
+
+Bundle 'tpope/vim-bundler'
+Bundle 'gmarik/vundle'
+
+" Define bundles via Github repos
+ 
+" Auto complete, depend on python2.7, cmake, need run install.py to install
+" Config:
+"     1. ', + d' to go defination/declearation
+"     2. min remind char is 2
+Bundle 'Valloric/YouCompleteMe'
+
+" Show dictionary and files
+" Config:
+"     1. 'ctrl + p' to open dictionarys
+Bundle 'kien/ctrlp.vim'
+
+" Browse the files in dictionary tree 
+Bundle "scrooloose/nerdtree"
+
+" Solarized theme, alternative for desert or default
+Bundle "altercation/vim-colors-solarized"
+
+" Show file status on the buttom line
+Bundle "Lokaltog/vim-powerline"
+
+" Benefit python coding,including breakpoint, pyDoc etc
+Bundle "klen/python-mode"
+
+" Learn the overview of file quickly
+Bundle 'majutsushi/tagbar'
+Bundle 'vim-scripts/ctags.vim'
+
+" Run shell in vim
+Bundle 'christoomey/vim-run-interactive'
+
+if filereadable(expand("~/.vimrc.bundles.local"))
+  source ~/.vimrc.bundles.local
+  endif
+
+filetype on
+
