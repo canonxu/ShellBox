@@ -7,7 +7,7 @@
 if [ $# -ne 1 ]; then
     echo "Exactly one param as hostname is required..."
     exit -1
-fi 
+fi
 
 old_name=`cat /etc/hostname`
 new_name=$1

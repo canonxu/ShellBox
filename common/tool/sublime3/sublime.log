@@ -12,5 +12,15 @@ plugin:
     6. SublimeTmpl - set template for program files, such as 'ctrl + alt + p' to create a new .php file
                    - need config in detail, especailly the python, shell, java file
     7. Pretty Json - format the json file, default shortcut is 'ctrl + alt + j'
-Theme:
-    Monokai Extended
+    8. git - git for sublime
+    9. Alignment - alignment for sublime, default shortcut id 'ctrl + alt + a'
+    10. colorSublime - preview theme
+Main configs:
+    tab_size: 2
+    font_size: 11
+    font_face: spouce code pro(consolas or Menlo or DejaVu Sans Mono)
+    color_schema: Solarized Dark(Monokai or Tomorrow Night) 
+    theme: Soda Dark
+    others: see \packages\User\Perferences.sublime-settings
+    
+Note: i copy the dir "C:\Users\canonxu\appData\Roaming\Sublime Text 3" to my github and rename as sublimeCnf, just copy this dir to the new computer(remember to remove the seesion under Local/), then all configs and plugins will work
