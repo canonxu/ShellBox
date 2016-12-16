@@ -2,13 +2,11 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/canonxu/.oh-my-zsh
+export ZSH=/root/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# Default theme is robbyrussell, and i changed it to ys on 20161212  
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="steeef"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -84,4 +82,10 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+#alias ohmyzsh="mate ~/.oh-my-zsh"
+alias c="clear"
+alias h="history"
+alias ll="ls -alh"
+alias mkdir="mkdir -pv"
+alias netsat="netstat -tulanp"
+alias wget="wget -c"

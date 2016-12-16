@@ -7,11 +7,11 @@
 
 cd ~
 
-url=https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+URL=https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 
 if [ "$1" = "install" ]; then
     echo "start installing..."
-    sh -c "$(curl -fsSL $url)"
+    sh -c "$(curl -fsSL $URL)"
     echo "install zsh successfully"
 elif [ "$1" = "uninstall" ]; then
     echo "start uninstalling zsh..."
