@@ -1,0 +1,9 @@
+
+B
+FILE=$1
+
+# print the specific line
+sed -n "2p" $FILE
+
+# 
+sed -i "$i " $FILE
