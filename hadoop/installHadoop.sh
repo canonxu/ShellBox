@@ -35,25 +35,22 @@ fi
 
 #install protobuf
 
-VERSION=2.6.1
+#VERSION=2.6.1, the version of protobuf must be 2.5.0, otherwise build failure...
+#such as : [ERROR] Failed to execute goal org.apache.hadoop:hadoop-maven-plugins:2.7.2:protoc (compile-protoc) on project hadoop-common: org.apache.maven.plugin.MojoExecutionException: protoc version is 'libprotoc 2.6.1', expected version is '2.5.0' -> [Help 1]
 
-URL=https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.tar.gz
-wget -c $URL 
+VERSION=2.5.0
 
-tar xf protobuf-2.6.1.tar.gz
-mv protobuf-2.6.1.tar.gz protobuf
-echo "start install cmake"
-apt-get install cmake
+version=`protoc --version`
 
-#install protobuf
+if [ $version != $VERSION ]; then
 
-protoc --version
+    rm -r /usr/local/protobuf > /dev/null 2>$1
 
-if [ $? -ne 0 ]; then
+    URL=https://github.com/google/protobuf/releases/download/v$VERSION/protobuf-$VERSION.tar.gz
+    wget -c $URL 
 
-    VERSION=2.6.1
-
-    URL=https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.tar.gz
+    tar xf protobuf-$VERSION.tar.gz
+    mv protobuf-$VERSION.tar.gz protobuf
     wget -c $URL 
 
     tar xf protobuf-2.6.1.tar.gz
@@ -66,9 +63,9 @@ if [ $? -ne 0 ]; then
     make install
     ldconfig
 
-    version=`protoc --version`
-    if [ $version = $VERSION ]; then
-         `Protobuf $VERSION installed successfully`
+    protoc --version
+    if [ $? -eq 0 ]; then
+         echo "Protobuf $VERSION installed successfully"
     fi 
 else
     version=`protoc --version`
