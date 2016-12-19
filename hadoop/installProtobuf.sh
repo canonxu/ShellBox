@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=2.5.0
+VERSION=$1
 
 cd /usr/local
 if [ -d /usr/local/protobuf ]; then
@@ -10,8 +10,12 @@ fi
 # download protobuf package
 URL=https://github.com/google/protobuf/releases/download/v$VERSION/protobuf-$VERSION.tar.gz
 wget -c $URL 
+if [ $? -ne 0 ]; then
+    echo "fail to download, plz check..."
+    exit 1
+fi
 
-# uncompress
+# unpackage
 tar xf protobuf-$VERSION.tar.gz
 cd /usr/local
 mv protobuf-$VERSION protobuf
@@ -31,4 +35,4 @@ if [ $version = $VERSION ]; then
     echo "protobuf $VERSION installed successfully"
 else
     echo "something wrong with protobuf installing, plz check and re-install ..."
-fi
+fi"
