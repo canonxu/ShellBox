@@ -1,7 +1,9 @@
 #!/usr/bin/expect -f
 
 # Function: directly SSH by username and password, no interaction
+
 # Dependency: apt-get install expect
+
 # Example: ./fastSSH.exp username passwaed
 
 # here is my aliyun host
