@@ -1,4 +1,5 @@
 #!/bin/bash
 
-curl -sSL https://get.docker.com/ | sh
+apt-get intall docker.io
 
+version=`docker version|head -1|cut -c 8-` && echo "docker $version installed successfully"
