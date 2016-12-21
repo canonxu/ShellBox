@@ -23,5 +23,8 @@ ln -s bin/mysql /usr/bin
 ln -s bin/mysqladmin /usr/mysqladmin
 
 # grant an account of mysql named 'canonxu' with password 'foobar'
-grant all privileges on *.* to canonxu@"%" identified by 'foobar' with grant option
+
+grant all privileges on *.* to canonxu@"%" identified by 'foobar' with grant option    # '%' representd all ip host
+
+grant all privileges on *.* to canonxu@"localhost" identified by 'foobar' with grant option    # 'localhost' represents the local host, but connect through local scoket rather than ip, 
 
